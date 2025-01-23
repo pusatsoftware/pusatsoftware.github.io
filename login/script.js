@@ -3,7 +3,7 @@ const form = document.getElementById('login-form');
 const message = document.getElementById('message');
 const loginBox = document.querySelector('.login-box');
 const contactMessage = document.getElementById("contact-message");
-const redirectUrl = "https://pusatservices.github.io/tools/";
+const redirectUrl = "https://pusatsoftware.github.io/tools/";
 
 console.log("contactMessage elementi:", contactMessage); // Kontrol
 
