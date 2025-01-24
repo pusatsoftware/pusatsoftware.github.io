@@ -1096,3 +1096,17 @@ section .container {
     transform: translateX(-50%);
   }
 }
+
+footer {
+  background-color: #333; /* Arka plan rengi */
+  color: #fff; /* Yazı rengi */
+  text-align: center; /* Ortalama */
+  padding: 10px 0; /* Üst ve alt boşluk */
+  font-family: 'Arial', sans-serif; /* Yazı fontu */
+  font-size: 14px; /* Yazı boyutu */
+  position: fixed; /* Sayfanın altına sabitleme */
+  bottom: 0; /* Alt kenara sabitleme */
+  width: 100%; /* Genişlik tam sayfa */
+  z-index: 1000; /* Diğer elemanların üstünde görünmesi */
+}
+
