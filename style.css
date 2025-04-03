@@ -17,6 +17,10 @@ body {
   color: var(--text);
   line-height: 1.6;
   scroll-behavior: smooth;
+  height: 100%; /* Sayfa yüksekliğini %100 yaparak kaydırma çubuğu sorununu çözüyoruz */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Sayfa tamamen dolsun */
 }
 
 /* Splash Screen */
@@ -39,6 +43,7 @@ body {
 
 .splash-text p {
   font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif; /* Fontu eski haline getirdik */
   font-style: italic;
   margin-bottom: 1rem;
   max-width: 600px;
@@ -94,6 +99,7 @@ nav a:hover::after {
   display: grid;
   place-items: center;
   text-align: center;
+  flex-grow: 1; /* İçeriğin sayfayı doldurmasını sağlıyoruz */
 }
 
 form {
@@ -133,6 +139,11 @@ footer {
   color: #aaa;
   font-size: 0.9rem;
   background: #1a1a1a;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 /* Mobil Uyum */
@@ -149,9 +160,12 @@ footer {
 
 /* Hoşgeldiniz Yazısı */
 .welcome-text {
-  font-family: 'Dancing Script', cursive; /* El yazısı fontu */
-  font-style: italic;
-  font-size: 3rem; /* Daha büyük font boyutu */
+  font-family: 'Dancing Script', cursive; /* Dancing Script fontu eklendi */
+  font-size: 4rem; /* Daha büyük font boyutu */
   color: white; /* Beyaz renk */
   text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Sayfanın tam ortasına yerleştir */
 }
