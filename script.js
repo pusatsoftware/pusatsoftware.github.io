@@ -34,5 +34,5 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       }
     });
-  }, 5000); // ⏱️ Süre: 5 saniye (önceden 3.000 idi)
+  }, 3500); // ⏱️ Süre: 5 saniye (önceden 3.000 idi)
 });
