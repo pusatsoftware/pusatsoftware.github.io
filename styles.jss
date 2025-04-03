@@ -1,0 +1,157 @@
+:root {
+  --primary: #00bcd4;
+  --bg: #121212;
+  --text: #eee;
+  --accent: #26c6da;
+  --padding: clamp(1rem, 2vw, 3rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Splash Screen */
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  text-align: center;
+  padding: 2rem;
+}
+
+.splash-text p {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  color: white;
+}
+
+.splash-text span {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+header {
+  padding: var(--padding);
+  background: #1e1e1e;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text);
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  height: 2px;
+  width: 0%;
+  background: var(--primary);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.section {
+  padding: var(--padding);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form input, form textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #2c2c2c;
+  color: #fff;
+}
+
+form button {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #aaa;
+  font-size: 0.9rem;
+  background: #1a1a1a;
+}
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
+  nav a {
+    margin: 0 10px;
+  }
+
+  header .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Hoşgeldiniz Yazısı */
+.welcome-text {
+  font-family: 'Dancing Script', cursive; /* El yazısı fontu */
+  font-style: italic;
+  font-size: 3rem; /* Daha büyük font boyutu */
+  color: white; /* Beyaz renk */
+  text-align: center;
+}
