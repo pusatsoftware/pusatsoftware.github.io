@@ -1,3 +1,4 @@
+/* Genel Değişkenler */
 :root {
   --primary: #00bcd4;
   --bg: #121212;
@@ -7,6 +8,7 @@
   --grey: #2c2c2c;
 }
 
+/* Genel Stil Ayarları */
 * {
   box-sizing: border-box;
 }
@@ -31,19 +33,20 @@ header {
 
 header .container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end;  /* Yazıyı sağa alıyoruz */
   align-items: center;
 }
 
-nav a {
-  color: var(--text);
-  margin-left: 1.5rem;
-  text-decoration: none;
+.home-link {
+  color: var(--text);  /* Rengi koruyor */
+  text-decoration: none;  /* Alt çizgiyi kaldırıyoruz */
   font-weight: bold;
+  font-size: 1.2rem;
   position: relative;
+  padding: 0.5rem 1rem;
 }
 
-nav a::after {
+.home-link::after {
   content: '';
   height: 2px;
   width: 0%;
@@ -54,7 +57,7 @@ nav a::after {
   transition: width 0.3s ease;
 }
 
-nav a:hover::after {
+.home-link:hover::after {
   width: 100%;
 }
 
@@ -96,6 +99,42 @@ footer {
   color: #aaa;
   font-size: 0.9rem;
   background: #1a1a1a;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Aralarındaki boşluğu ayarlıyoruz */
+  margin-top: 20px;
+}
+
+.instagram-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.instagram-btn {
+  background-color: #333;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(-30px); /* Yukarı kaydırma */
+}
+
+.instagram-btn:hover {
+  transform: translateY(-30px) scale(1.1);  /* Hoverda büyüme */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.instagram-btn img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
