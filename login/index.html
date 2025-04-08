@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yönetim Paneli</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Giriş Paneli</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-box">
-            <h1>Yönetim Paneli</h1>
-            <form id="login-form">
-                <div class="input-group">
-                    <input type="text" id="username" name="username" placeholder="Kullanıcı Adı" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="password" name="password" placeholder="Şifre" required>
-                </div>
-                <button type="submit">Giriş</button>
-                <div id="message" class="message"></div>
-            </form>
-        </div>
+
+  <section class="section">
+    <div class="login-card">
+      <h2 class="login-title">🔐 Yönetici Girişi</h2>
+      <p class="login-subtitle">Lütfen kimlik bilgilerinizi girin</p>
+
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Kullanıcı Adı (örn. admin)" required />
+        <input type="password" id="password" placeholder="Şifre" required />
+        <button type="submit">
+          <i class="fas fa-arrow-right"></i> Giriş Yap
+        </button>
+      </form>
     </div>
-    <footer class="copyright">
-        &copy; <span id="year"></span> Pusat Software. Tüm Hakları Saklıdır.
-    </footer>
-    <script src="script.js" defer></script>
-    <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-    </script>
+  </section>
+
+  <div id="messageBox"></div>
+
+  <footer>
+    Pusat Software © 2025 Tüm hakları saklıdır.
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

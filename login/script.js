@@ -1,41 +1,29 @@
-// script.js
-const form = document.getElementById('login-form');
-const message = document.getElementById('message');
-const loginBox = document.querySelector('.login-box');
-const contactMessage = document.getElementById("contact-message");
-const redirectUrl = "https://pusatsoftware.github.io/tools/";
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-console.log("contactMessage elementi:", contactMessage); // Kontrol
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  if (username === "admin" && password === "1234") {
+    showMessage("Giriş Başarılı ✔️ Yönlendiriliyorsunuz...", "success");
 
-    const username = form.username.value;
-    const password = form.password.value;
+    // 2 saniye sonra yönlendirme
+    setTimeout(() => {
+      window.location.href = "https://www.youtube.com)"; // burayı istediğin sayfayla değiştirebilirsin
+    }, 2000);
 
-    if (username === 'admin' && password === '159753') {
-        message.textContent = "Giriş Başarılı! Yönlendiriliyorsunuz...";
-        message.className = "message success show";
-        setTimeout(() => {
-            window.location.href = redirectUrl;
-        }, 1500);
-    } else {
-        message.textContent = "Giriş Başarısız!";
-        message.className = "message error show";
-
-        if (contactMessage) { // contactMessage null değilse çalışır
-            contactMessage.classList.add("show");
-            console.log("contactMessage.classList.add('show') çalıştı");
-            loginBox.classList.add('error-shake');
-
-            setTimeout(() => {
-                loginBox.classList.remove('error-shake');
-                message.className = "message";
-                contactMessage.classList.remove("show");
-                console.log("contactMessage.classList.remove('show') çalıştı");
-            }, 3000);
-        } else {
-            console.error("contactMessage elementi bulunamadı!");
-        }
-    }
+  } else {
+    showMessage("Giriş Başarısız ❌", "error");
+  }
 });
+
+function showMessage(message, type) {
+  const box = document.getElementById("messageBox");
+  box.textContent = message;
+  box.className = `message ${type}`;
+  box.style.display = "block";
+
+  setTimeout(() => {
+    box.style.display = "none";
+  }, 3000);
+}
