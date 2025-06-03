@@ -76,7 +76,7 @@ class Flower {
       ctx.moveTo(0, 0);
       ctx.bezierCurveTo(2 * this.scale, -5 * this.scale, 3 * this.scale, -12 * this.scale, 0, -14 * this.scale);
       ctx.bezierCurveTo(-3 * this.scale, -12 * this.scale, -2 * this.scale, -5 * this.scale, 0, 0);
-      ctx.fillStyle = "black";
+      ctx.fillStyle = "white";
       ctx.shadowColor = "rgba(200,200,200,0.6)";
       ctx.shadowBlur = 5;
       ctx.fill();
@@ -113,7 +113,6 @@ function spawnBranch(x, y, depth, angle, length) {
 }
 
 function animate() {
-  ctx.fillStyle = "#000";
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   for (let b of branches) {
