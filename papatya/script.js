@@ -113,6 +113,7 @@ function spawnBranch(x, y, depth, angle, length) {
 }
 
 function animate() {
+  ctx.fillStyle = "#000";
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   for (let b of branches) {
