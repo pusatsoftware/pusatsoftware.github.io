@@ -27,8 +27,13 @@ loginForm.addEventListener('submit', function (e) {
       `;
     }, 2500);
 
+    // 2 saniye sonra yönlendirme (toplamda 4.5 saniye)
+    setTimeout(() => {
+      window.location.href = "https://pusatsoftware.github.io/line";
+    }, 4500);
+
   } else {
     alert("Yetkisiz giriş. Sistemden çıkış yapılıyor.");
-    window.location.href = "https://google.com";
+    window.location.href = "https://google.com/404";
   }
 });
