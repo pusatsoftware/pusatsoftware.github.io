@@ -22,7 +22,7 @@ loginForm.addEventListener('submit', function (e) {
 
     setTimeout(() => {
       output.innerHTML = `
-        <h2 class="typewriter neon">Erişim Yetkisi Verildi: root@neo</h2>
+        <h2 class="typewriter neon">Erişim Yetkisi Verildi: root@pusat</h2>
         <p class="subtitle">Shell ortamı başlatılıyor...</p>
       `;
     }, 2500);
