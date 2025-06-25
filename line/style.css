@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.terminal {
+  outline: none;
+  user-select: none;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.line {
+  display: flex;
+  font-size: 1.2rem;
+  white-space: normal;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.prompt-prefix {
+  flex-shrink: 0;
+  color: white;
+  display: flex;
+  white-space: nowrap;
+  user-select: none;
+  margin-right: 8px;
+  font-family: monospace;
+  line-height: 1.2rem;
+  align-self: flex-start;
+}
+
+.root-root {
+  color: red;
+}
+
+.colon, .dollar {
+  color: white;
+}
+
+.tilde {
+  color: #00CED1;
+}
+
+.input {
+  outline: none;
+  white-space: pre-wrap;
+  color: white;
+  caret-color: white;
+  flex-grow: 1;
+  word-break: break-word;
+  min-width: 0;
+  font-family: monospace;
+  line-height: 1.2rem;
+  align-self: flex-start;
+  max-width: calc(100vw - 140px);
+}
