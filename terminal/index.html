@@ -1,0 +1,37 @@
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css" />
+
+<!-- GSAP (Animasyon kütüphanesi) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+
+<!-- JS -->
+<script src="script.js" defer></script>
+
+<div class="background-layer"></div>
+
+<header class="glass header">
+  <h1>&gt; root@neo<span class="cursor">_</span></h1>
+</header>
+
+<main class="glass main-section">
+  <section class="intro">
+    <h2 class="neon">Terminal Giriş</h2>
+
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Kullanıcı Adı" required />
+      <input type="password" id="password" placeholder="Şifre" required />
+      <button class="neon-button" type="submit">Giriş Yap</button>
+    </form>
+
+    <div id="terminalOutput" class="hidden">
+      <p class="subtitle">Bağlantı güvenli. Kimlik doğrulanıyor...</p>
+    </div>
+  </section>
+</main>
+
+<footer class="glass footer">
+  <p>© 2025 | NeoTerminal Systems</p>
+</footer>
