@@ -9,7 +9,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     // 2 saniye sonra yönlendirme
     setTimeout(() => {
-      window.location.href = "pusatsoftware.github.io/tools/"; // burayı istediğin sayfayla değiştirebilirsin
+      window.location.href = "https://pusatsoftware.github.io/tools/"; // burayı istediğin sayfayla değiştirebilirsin
     }, 2000);
 
   } else {
